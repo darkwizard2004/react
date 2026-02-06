@@ -9,6 +9,7 @@ function Events() {
         </div>
     )
 }
+// if you want arguments to include use callback function and if not ten normal function call.
 
 
 

@@ -10,14 +10,16 @@
 
 // 1.2)
 
-// 2) Given a student object with student name and the marks for english, maths and computers. If the total marks of a student is >= 225, the grade is A, >=180 the grade is B, >=150 the grade is C, otherwise the grade is D. Build a React Component that takes the student object as props and uses it to show all the students details, total marks and grade on the DOM
+// 2) Given a student object with student name and the marks for english, maths and computers.
+//  If the total marks of a student is >= 225, the grade is A, >=180 the grade is B, >=150 the grade is C, otherwise the grade is D. 
+// Build a React Component that takes the student object as props and uses it to show all the students details, total marks and grade on the DOM
 
-// const student = {
-//   name: 'John Doe',
-//   english: 90,
-//   maths: 80,
-//   computers: 70,
-// }
+const student = {
+  name: 'John Doe',
+  english: 90,
+  maths: 80,
+  computers: 70,
+}
 
 // 3)Build a React component to display all the employee details as unordered list on the DOM in the following format:
 
@@ -25,61 +27,61 @@
 
 // No need to pass as props.
 
-// const employees = [
-//   {
-//     name: 'Jack Smith',
-//     level: 2,
-//     dept: 'Tech',
-//     designation: 'Manager',
-//     salary: 24000,
-//   },
-//   {
-//     name: 'Mary Robbins',
-//     level: 3,
-//     dept: 'Fin',
-//     designation: 'Manager',
-//     salary: 28000,
-//   },
-//   {
-//     name: 'Steve Williams',
-//     level: 4,
-//     dept: 'Ops',
-//     designation: 'President',
-//     salary: 35000,
-//   },
-//   {
-//     name: 'Bob Andrews',
-//     level: 1,
-//     dept: 'Fin',
-//     designation: 'Trainee',
-//     salary: 16500,
-//   },
-//   {
-//     name: 'Dave Martin',
-//     level: 2,
-//     dept: 'Fin',
-//     designation: 'Manager',
-//     salary: 21700,
-//   },
-//   {
-//     name: 'Julia Clarke',
-//     level: 3,
-//     dept: 'Ops',
-//     designation: 'Manager',
-//     salary: 26900,
-//   },
-//   {
-//     name: 'Kathy Jones',
-//     level: 4,
-//     dept: 'Tech',
-//     designation: 'President',
-//     salary: 42500,
-//   },
-//   {
-//     name: 'Tom Bresnan',
-//     level: 2,
-//     dept: 'Tech',
-//     designation: 'Manager',
-//     salary: 22200,
-//   },
-// ]
+const employees = [
+  {
+    name: 'Jack Smith',
+    level: 2,
+    dept: 'Tech',
+    designation: 'Manager',
+    salary: 24000,
+  },
+  {
+    name: 'Mary Robbins',
+    level: 3,
+    dept: 'Fin',
+    designation: 'Manager',
+    salary: 28000,
+  },
+  {
+    name: 'Steve Williams',
+    level: 4,
+    dept: 'Ops',
+    designation: 'President',
+    salary: 35000,
+  },
+  {
+    name: 'Bob Andrews',
+    level: 1,
+    dept: 'Fin',
+    designation: 'Trainee',
+    salary: 16500,
+  },
+  {
+    name: 'Dave Martin',
+    level: 2,
+    dept: 'Fin',
+    designation: 'Manager',
+    salary: 21700,
+  },
+  {
+    name: 'Julia Clarke',
+    level: 3,
+    dept: 'Ops',
+    designation: 'Manager',
+    salary: 26900,
+  },
+  {
+    name: 'Kathy Jones',
+    level: 4,
+    dept: 'Tech',
+    designation: 'President',
+    salary: 42500,
+  },
+  {
+    name: 'Tom Bresnan',
+    level: 2,
+    dept: 'Tech',
+    designation: 'Manager',
+    salary: 22200,
+  },
+]
