@@ -1,0 +1,28 @@
+before learning useMemo we have to get some basic idea of input and its important features.
+
+we use input like - 
+
+<input type = "text" name = "" id = "" />  
+
+but by default it is uncontrollable 
+
+so to control it, we have 3 things:
+1. state
+2. Evenet handler
+3. value
+
+useMemo -> hook -> memoization of value.
+useCallback -> hook -> memoization of functions.
+
+note:
+let x = {a:10};
+let y = {a:10};
+x === y --> false;
+
+let a = [10,20,30];
+let b = [10,20,30];
+
+a === b --> false;
+
+every objects and array are refrentially diifferent.
+similarly functions are also refrentially diifferent.

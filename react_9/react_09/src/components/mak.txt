@@ -1,0 +1,85 @@
+how can you optimise your react application?:
+Memo, useMemo, seCallback, useRef, lazyLoading,..
+
+
+useRef() => 
+
+1. it is a hook which is used to get the reference of the DOM element.
+2. useful to mantain the state between 2 renders.
+
+
+lazyLoading() =>
+
+I will load on demand.
+
+I will first render the components needed, then i will render other components as when needed or on demand.
+
+
+Routing =>
+
+React does not have a router if its own.
+hence we have to install react-router-dom package.
+
+RRD = 2ways:
+
+1.:
+
+1. install RRD.
+2.
+3.in main.jsx:
+get the App inside BrowserRouter like:
+<BrowserRouter>
+    <App>
+<BrowserRouter>
+
+and import (BrowserRouter) form 'react-router-dom'
+
+and we can also wrap up inside Router and import Router as well, like:
+<BrowserRouter>
+    <Router>
+        <App>
+    <Router>
+<BrowserRouter>
+
+import (BrowserRouter, Router) form 'react-router-dom'
+but we will not use it.
+
+
+only <BrowserRouter> wrapping helps to acces every functionality of RRD, which is not possible inside Router.
+
+4. Inside App.jsx, create a Routes element inside a parent element and set up the different Route ath in it.
+like:
+<Routes>
+    <Route path = '/' element = {<Home/>} />
+    <Route path = '/Dashboard' element = {<Dashboard/>} />
+    <Route path = '/Profile' element = {<Profile/>} />
+</Routes>
+
+and import { Route, Routes } from 'react-router-dom'
+import Home from './components/Home';
+import Dashboard from './components/Dashboard';
+import Profile from './components/Profile';
+
+while creating home,Dashboard,prfile, components seperately.
+
+but in network we get to see dashboard, profile in home page which means they are prerendered or installed .
+but we want them to be on our demand.
+
+so instead of loading we will lazyLoad it.
+
+for this we write the import statement of dashboard and profile in a different manner.
+we use React.lazy method which accepts a call back function.
+and make Dashboard as a varibale and asiign it to the lazy method.
+like:
+// import Dashboard from './components/Dashboard';
+const Dashboard = React.lazy( ()=> import ('./components/Dashboard'))
+// import Profile from './components/Profile';
+const Profile = React.lazy( ()=> import ('./components/Profile'))
+
+and rather then writing directly in return of App we write it using suspense and fallback.
+fallback is the message that will be shown until the profile is loaded.
+<Route path = '/Dashboard' element = {<Suspense fallback = "Loading1..."><Dashboard/></Suspense>} />
+<Route path = '/Profile' element = {<Suspense fallback = "loading2..."><Profile/></Suspense>} />
+import { Suspense} from 'react';
+
+we will use link using <link to = '..' >...</link>
